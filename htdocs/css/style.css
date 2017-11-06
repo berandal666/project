@@ -1,0 +1,777 @@
+/*
+Theme Name: QUARTZ STATIC - Version: 1.0
+Description: Designed by <a href="http://themeforest.net/user/josweb">josweb</a>.
+Author: <a href="http://www.spiralpixel.com">Jo</a>
+*/
+/*
+1. 	General
+2.	Main Content
+3.	Modal Box
+4. 	KeyFrames
+ */
+
+/*	--------------------------------------------------
+	1: General
+	-------------------------------------------------- */
+@import url('reset.css');
+@font-face {
+    font-family: 'BebasNeueRegular';
+    src: url('fonts/BebasNeue-webfont.eot');
+    src: url('fonts/BebasNeue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/BebasNeue-webfont.woff') format('woff'),
+         url('fonts/BebasNeue-webfont.ttf') format('truetype'),
+         url('fonts/BebasNeue-webfont.svg#BebasNeueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+a {
+	color: #fff;
+	outline: 0;	
+    text-decoration: none;
+	-moz-transition: color .3s ease-in,background .3s ease-in,opacity .3s ease-in;
+    transition: color .3s ease-in,background .3s ease-in,opacity .3s ease-in;
+    -webkit-transition: color .3s ease-in,background .3s ease-in,opacity .3s ease-in;
+    -o-transition: color .3s ease-in,background .3s ease-in,opacity .3s ease-in;
+}
+/* === Preloader === */
+.QOverlay {
+	background: #ebecf3 url(../images/pattern.png) repeat;
+	z-index: 99999;
+}
+
+.QLoader { background: #111;
+	border: 1px solid #000;
+	border-bottom: 1px solid #444;
+	height: 1px;
+}
+.wrapper {
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+.wrapper h1 {
+    color: white;
+    -webkit-filter: blur(1px);
+}
+.wrapper h1:first-child {
+    color: whitesmoke;
+    -webkit-filter: blur(.8px);
+    opacity: .9;
+}
+
+#logo { margin: 40px auto; text-align: center;
+	-webkit-animation-delay: 1s;
+    -moz-animation-delay: 1s;
+    -ms-animation-delay: 1s;
+    animation-delay: 1s; }
+.muter {
+onmousedown:stop;
+animation-name: rotate ;
+animation-duration: 5s;
+animation-play-state: running;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+opacity: 1.0;filter: alpha(opacity=50);} 
+
+.muter:hover {opacity: 1.0;filter: alpha(opacity=100);}
+
+@keyframes rotate{
+10% {transform:rotateY(36deg)}
+20% {transform:rotateY(72deg)}
+30% {transform:rotateY(108deg)}
+40% {transform:rotateY(144deg)}
+50% {transform:rotateY(180deg)}
+60% {transform:rotateY(216deg)}
+70% {transform:rotateY(252deg)}
+80% {transform:rotateY(288deg)}
+90% {transform:rotateY(324deg)}
+100% {transform:rotateY(360deg)}
+}
+
+/*	--------------------------------------------------
+	2: Main Content
+	-------------------------------------------------- */
+.container {
+    font-family: 'Old English Five';
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2000;
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+	background: -moz-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.5));
+	background: -ms-radial-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.3) 35%, rgba(0, 0, 0, 0.5));
+	background: none repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.content {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+	z-index: 3000;
+}
+.table{
+	height:auto;
+	width:100%;
+	position:absolute;
+	bottom:40px;
+	}
+/* === Circular Link === */
+.circle-link {
+    text-align: center;
+    line-height: 100px;
+    width: 100px;
+    height: 100px;
+    background: #000;
+    color: #fff;
+    font-size: 17px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    -webkit-animation: fadeInRotate 1s linear 5s backwards;
+    -moz-animation: fadeInRotate 1s linear 5s backwards;
+    -ms-animation: fadeInRotate 1s linear 5s backwards;
+    animation: fadeInRotate 1s linear 5s backwards;
+    -webkit-transform: scale(1) rotate(0deg);
+    -moz-transform: scale(1) rotate(0deg);
+    -o-transform: scale(1) rotate(0deg);
+    -ms-transform: scale(1) rotate(0deg);
+    transform: scale(1) rotate(0deg);
+}
+
+.circle-link:hover { background: #b51515 url(../images/noise.png) repeat; color: #fff; }
+
+.container h2 {
+    position: absolute;
+    top: 50%;
+    line-height: 100px;
+    height: 100px;
+    margin-top: -50px;
+    font-size: 60px;
+    width: 100%;
+    text-align: center;
+    color: transparent;
+    -webkit-animation: blurFadeInOut 3s ease-in backwards;
+    -moz-animation: blurFadeInOut 3s ease-in backwards;
+    -ms-animation: blurFadeInOut 3s ease-in backwards;
+    animation: blurFadeInOut 3s ease-in backwards;
+}
+
+/* === Frames === */
+.container h2.frame-1 {
+    -webkit-animation-delay: 2s;
+    -moz-animation-delay: 2s;
+    -ms-animation-delay: 2s;
+    animation-delay: 2s;
+}
+
+.container h2.frame-2 {
+    -webkit-animation-delay: 5s;
+    -moz-animation-delay: 5s;
+    -ms-animation-delay: 5s;
+    animation-delay: 5s;
+}
+.btn {
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size:16px;
+  font-weight: 400;
+  line-height: 45px;
+  margin: 0 auto 2em;
+  max-width: 160px; 
+  position: relative;
+  text-decoration: none;
+  text-transform: uppercase;
+  vertical-align: middle;
+  width: 100%; 
+  
+  @media(min-width: 400px) {
+    display: inline-block;
+    margin-right: 2.5em;
+  
+    &:nth-of-type(even) {
+      margin-right: 0;
+    }
+  }
+  
+  @media(min-width: 600px) {
+  
+    &:nth-of-type(even) {
+      margin-right: 2.5em;
+    }
+    
+    &:nth-of-type(5) {
+      margin-right: 0;
+    }
+    
+  }
+  
+  &:hover { text-decoration: none; }
+  
+}
+
+.btn-5 {
+  border: 0 solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0);
+  outline: 1px solid;
+  outline-color: rgba(255, 255, 255, .5);
+  outline-offset: 0px;
+  text-shadow: none;
+  transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);
+} 
+
+.btn-5:hover {
+  border: 1px solid;
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+  outline-color: rgba(255, 255, 255, 0);
+  outline-offset: 15px;
+  text-shadow: 1px 1px 2px #427388; 
+}
+.container h2.frame-3 {
+    -webkit-animation-delay: 8s;
+    -moz-animation-delay: 8s;
+    -ms-animation-delay: 8s;
+    animation-delay: 8s;
+}
+
+.container h2.frame-4 {
+    font-size: 60px;
+    line-height: 170px;
+    -webkit-animation-delay: 11s;
+    -moz-animation-delay: 11s;
+    -ms-animation-delay: 11s;
+    animation-delay: 11s;
+}
+
+.container h2.frame-5 {
+    -webkit-animation: none;
+    -moz-animation: none;
+    -ms-animation: none;
+    animation: none;
+    color: transparent;
+    text-shadow: 0px 0px 1px #fff;
+}
+
+.container h2.frame-5 span {
+    -webkit-animation: blurFadeIn 3s ease-in 14s backwards;
+    -moz-animation: blurFadeIn 1s ease-in 14s backwards;
+    -ms-animation: blurFadeIn 3s ease-in 14s backwards;
+    animation: blurFadeIn 3s ease-in 14s backwards;
+    color: transparent;
+    text-shadow: 0px 0px 1px #fff;
+}
+
+.container h2.frame-5 span:nth-child(2) {
+    -webkit-animation-delay: 15s;
+    -moz-animation-delay: 15s;
+    -ms-animation-delay: 15s;
+    animation-delay: 15s;
+}
+
+.container h2.frame-5 span:nth-child(3) {
+    -webkit-animation-delay: 16s;
+    -moz-animation-delay: 16s;
+    -ms-animation-delay: 16s;
+    animation-delay: 16s;
+}
+
+/*	--------------------------------------------------
+	3: Reveal Modal Box
+	-------------------------------------------------- */
+.reveal-modal-bg {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    zoom: 1;
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=60)";
+    filter: alpha(opacity=60);
+    opacity: 0.6;
+    z-index: 0;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+.reveal-modal {
+    visibility: hidden;
+    top: 60px;
+    color: #EBEDED;
+    margin: 0 auto;
+    width: 500px;
+    background: #222 url(../images/texture.jpg) repeat;
+    position: relative;
+    z-index: 3000;
+    padding: 20px 40px 30px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    line-height: 1.5;
+    -moz-box-shadow: 0 0 5px 2px #111;
+    -webkit-box-shadow: 0 0 5px 2px #111;
+    box-shadow: 0 0 5px 2px #111;
+}
+
+a.close-reveal-modal:hover { color: #fff; }
+
+.reveal-modal h1 {
+    font-size: 20px;
+    color: #EBEDED;
+    line-height: 1.9;
+    font-family: 'BebasNeueRegular';
+}
+
+.reveal-modal h2 {
+    font-size: 16px;
+    line-height: 1.9;
+    font-family: 'BebasNeueRegular';
+}
+
+.reveal-modal { margin: 5px 0 10px; font-size:13px; line-height:1.5;}
+
+.reveal-modal .close-reveal-modal {
+    font-size: 22px;
+    font-family: arial,sans-serif;
+    line-height: .5;
+    position: absolute;
+    top: 8px;
+    right: 11px;
+    color: #fff;
+    text-shadow: 0 -1px 1px rbga(0,0,0,.6);
+    font-weight: bold;
+    cursor: pointer;
+} 
+
+/* === Countdown === */
+.counter {
+    height: 100px;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+}
+
+.countdown li {
+    margin: 15px 10px 0px 0px;
+    display: inline;
+    text-align: center;
+    float: left;
+	height: 54px;
+    border: 1px solid #333;
+    padding-top: 32px;
+    -moz-box-shadow: 0 0 3px 0px #111;
+    -webkit-box-shadow: 0 0 3px 0px #111;
+    box-shadow: 0 0 3px 0px #111;
+    background: #222 url(../images/pattern.png) repeat;
+}
+
+
+.number {
+    text-shadow: 0 -1px 0 rgba(0,0,0,.9);
+    font-size: 50px;
+    line-height: 5px;
+    color: #fff;
+    font-family: 'BebasNeueRegular', sans-serif;
+}
+
+.time {
+    font-size: 11px;
+    margin-top: 5px;background:transparent;
+    text-transform: uppercase;
+    color: #aaa;
+	width:100px;
+	display:block;
+    font-family: 'arial', sans-serif;
+}
+
+/* === Social Icons === */
+#social {
+    margin: 30px auto 5px;
+    border-top: 3px double #333;
+}
+
+#icons a {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity=90);
+    opacity: 0.9;
+}
+
+#icons a:hover {
+	-ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=70)";
+    filter: alpha(opacity=70);
+    opacity: 0.7;
+}
+
+/* === Twitter === */
+
+#twitter-wrapper { margin-top: 0px; text-align: left; }
+
+#tweet {
+    margin: 0px auto;
+    color: #ccc;
+    font-size: 12px;
+    font-family: 'arial', sans-serif;
+    margin: 0 auto;
+}
+
+#tweet ul {
+    list-style: none;
+    display: inline;
+    overflow: hidden;
+}
+
+#tweet li {
+    line-height: 20px;
+    list-style: none;
+    display: block;
+}
+
+#tweet a {
+    color: #777;
+    font-family: arial, sans-serif;
+    font-size: 12px;
+}
+
+#tweet a:hover { color: #ccc; }
+
+/* === Email Contact === */
+.details {
+    float: left;
+	width: 500px;
+    height: 10px;
+    margin: 0 auto;
+    padding: 55px 0px 0px;
+    text-align: left;
+}
+
+input#email {
+    background: url(../images/mail-bg.png) no-repeat;
+    width: 217px;
+    height: 46px;
+    border: 0 none;
+    padding: 0 10px 0 10px;
+    color: #ccc;
+    font: normal 12px 'arial', sans-serif;
+    float: left;
+    margin-right: 10px;
+    line-height: 40px;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter: alpha(opacity=90);
+    opacity: .90;
+}
+
+input#submit {
+    background: url(../images/submit.png) no-repeat 0px -1px;
+    width: 130px;
+    height: 46px;
+    border: 0 none;
+    cursor: pointer;
+    color: #ccc;
+    padding-left: 10px;
+    float: left;
+    font-family: 'arial', sans-serif;
+    letter-spacing: 2px;
+}
+
+input#submit:active {
+    -moz-transform: translateY(1px);
+    -ms-transform: translateY(1px);
+    -o-transform: translateY(1px);
+    -webkit-transform: translateY(1px);
+    transform: translateY(1px);
+}
+
+.success {
+    font: normal 30px 'BebasNeueRegular', serif;
+    color: #999;
+    margin-top: 0px;
+}
+
+.error {
+    color: #999;
+    font: normal 10px 'arial', sans-serif;
+    position: relative;
+    float: right;
+    margin: 0px 5px 0px 0px;
+    width: 100px;
+}
+
+/*	--------------------------------------------------
+	4: Keyframes
+	-------------------------------------------------- */
+/**/
+@-webkit-keyframes blurFadeInOut {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        -webkit-transform: scale(1.3);
+    }
+
+    20%,75% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        -webkit-transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        text-shadow: 0px 0px 50px #fff;
+        -webkit-transform: scale(0);
+    }
+}
+
+@-webkit-keyframes blurFadeIn {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        -webkit-transform: scale(1.3);
+    }
+
+    50% {
+        opacity: 0.5;
+        text-shadow: 0px 0px 10px #fff;
+        -webkit-transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        -webkit-transform: scale(1);
+    }
+}
+
+@-webkit-keyframes fadeInBack {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0);
+    }
+
+    50% {
+        opacity: 0.4;
+        -webkit-transform: scale(2);
+    }
+
+    100% {
+        opacity: 0.2;
+        -webkit-transform: scale(5);
+    }
+}
+
+@-webkit-keyframes fadeInRotate {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale(0) rotate(360deg);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: scale(1) rotate(0deg);
+    }
+}
+/**/
+@-moz-keyframes blurFadeInOut {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        -moz-transform: scale(1.3);
+    }
+
+    20%,75% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        -moz-transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        text-shadow: 0px 0px 50px #fff;
+        -moz-transform: scale(0);
+    }
+}
+
+@-moz-keyframes blurFadeIn {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        -moz-transform: scale(1.3);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        -moz-transform: scale(1);
+    }
+}
+
+@-moz-keyframes fadeInBack {
+    0% {
+        opacity: 0;
+        -moz-transform: scale(0);
+    }
+
+    50% {
+        opacity: 0.4;
+        -moz-transform: scale(2);
+    }
+
+    100% {
+        opacity: 0.2;
+        -moz-transform: scale(5);
+    }
+}
+
+@-moz-keyframes fadeInRotate {
+    0% {
+        opacity: 0;
+        -moz-transform: scale(0) rotate(360deg);
+    }
+
+    100% {
+        opacity: 1;
+        -moz-transform: scale(1) rotate(0deg);
+    }
+}
+/**/
+@keyframes blurFadeInOut {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        transform: scale(1.3);
+    }
+
+    20%,75% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 0;
+        text-shadow: 0px 0px 50px #fff;
+        transform: scale(0);
+    }
+}
+
+@keyframes blurFadeIn {
+    0% {
+        opacity: 0;
+        text-shadow: 0px 0px 40px #fff;
+        transform: scale(1.3);
+    }
+
+    50% {
+        opacity: 0.5;
+        text-shadow: 0px 0px 10px #fff;
+        transform: scale(1.1);
+    }
+
+    100% {
+        opacity: 1;
+        text-shadow: 0px 0px 1px #fff;
+        transform: scale(1);
+    }
+}
+
+@keyframes fadeInBack {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(2);
+    }
+
+    100% {
+        opacity: 0.2;
+        transform: scale(5);
+    }
+}
+
+@keyframes fadeInRotate {
+    0% {
+        opacity: 0;
+        transform: scale(0) rotate(360deg);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1) rotate(0deg);
+    }
+}
+.nyan{
+  z-index:10;
+  position:absolute;
+  width:34px;height:33px;
+}
+.rainbow{position:absolute;width:9px;height:18px;margin-top:6px;z-index:5;}
+.star{width:7px;height:7px;position:absolute;z-index:1;-webkit-background-size: 100% 100%;}
+
+.nyan{background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAMwAAAAgCAYAAABepJcLAAACiUlEQVR4nO2Yi23DMAxEvVMW6Ghdwzt1p7Qp4sKhKIkUqVyUXtEHBIlsPZ9J+bN9fG4bIcQGXICQlYALELIScAFCVgIuQMhKwAUIWQnboG27RkmRpQc9wB4mievXHiYaCj3o8QoePomffzcJodCDHq/iYRepTXTZ9c+KTEog9KAH0MMm0pvI2MHhQOhBjwSP7f680vM4xo03TIdC5CzeEcn0KFwqHl4XeqxfH7ex+77/0spDjktvGFVE6dyaSPaJqbqIE+Nxocf69XHefysPOeahYQ7RA7PIqTOjIqFAxCW46aKcmLQCocf0+pA1GvU45jmj/V40jNw42rlekVAgk1wyV/aVPeTYjJV9JAtZp1kePdSG0ZpGFak8UEVF3IE0HuwyXMyF+uYecltZ5Mj68HqMOBR5yFVECnU791JeSoe71xOI4pEVSq1I0R6IPGRdIOtDa+BjzIjH7a/mJn8rGqbWNH8ijhVsRMQciOGVYaZLtXEBHsg8ZA6o+sisU20xOB9bt2G0YCz3hhki5kCe4KJtg/AIraiTzo37SjfJIeJxvaM1bNHAd6oNY74FUd48RESGA6m8EQqFUjnBSA/zQjbBY+jlwxPqI8NDZiw/mxvmQaRzucsQyfDIdJEFivCQY5B5vFt91BaiM2r2ZpHOJS8qkuUx0wXhcfyO9mjegQDrw+uhubQosjffDhmIiLhDAbjQQ7/6orI49jeah4VizpaIZTUYxdMsMz1GXJAe6DzO8yOzmOXRa1bzSdG+t2xr3c5aIJ79vaML2gE9P9qjusMz2ve9g6lt6ynQ1pwZLl6fV3BBO6Dnz9hP5BhcxUvIfwcuQMhKwAUIWQm4ACErARcgZCXgAoSsxDdoVHw2ca8RoAAAAABJRU5ErkJggg==);}
+.rainbow{background-image: url(data:image/png;base64,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);}
+.star{background-image: url(data:image/gif;base64,R0lGODlhBwAHAIABAP///////yH/C05FVFNDQVBFMi4wAwEAAAAh/wtYTVAgRGF0YVhNUDw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBXaW5kb3dzIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjU0NTY1ODg4RDlBODExRTI5MzZGQjVEN0ZDMUFENjhCIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjU0NTY1ODg5RDlBODExRTI5MzZGQjVEN0ZDMUFENjhCIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NTQ1NjU4ODZEOUE4MTFFMjkzNkZCNUQ3RkMxQUQ2OEIiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6NTQ1NjU4ODdEOUE4MTFFMjkzNkZCNUQ3RkMxQUQ2OEIiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz4B//79/Pv6+fj39vX08/Lx8O/u7ezr6uno5+bl5OPi4eDf3t3c29rZ2NfW1dTT0tHQz87NzMvKycjHxsXEw8LBwL++vby7urm4t7a1tLOysbCvrq2sq6qpqKempaSjoqGgn56dnJuamZiXlpWUk5KRkI+OjYyLiomIh4aFhIOCgYB/fn18e3p5eHd2dXRzcnFwb25tbGtqaWhnZmVkY2JhYF9eXVxbWllYV1ZVVFNSUVBPTk1MS0pJSEdGRURDQkFAPz49PDs6OTg3NjU0MzIxMC8uLSwrKikoJyYlJCMiISAfHh0cGxoZGBcWFRQTEhEQDw4NDAsKCQgHBgUEAwIBAAAh+QQJFAABACwAAAAABwAHAAACB4yPqQfrXwAAIfkEBRQAAQAsAAAAAAcABwAAAgmMj2mQzPiUNAUAIfkECRQAAQAsAQABAAUABQAAAgdMYGm4mlwAACH5BAkUAAEALAAAAAAHAAcAAAILjGEZqA0IWUuSpgIAIfkECRQAAQAsAAAAAAcABwAAAgqMYZeYzdscnKEAACH5BAUUAAEALAAAAAAHAAcAAAIJjGGpm6jO4kkFADs=);}
+html, body {
+  padding: 0;
+  margin: 0;
+  background-image: url("http://www.ultrahdwall.com/wp-content/uploads/2013/08/Joker-Wallpaper.jpg");
+background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+p {
+  font-family: "VT323";
+  font-size: 70pt;
+  text-align: center;
+  animation-name: example;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0% {
+    color: lime;
+    text-shadow: 0 0 10px green;
+  }
+  25% {
+    color: green;
+    text-shadow: 1px 1px 1px lime;
+    transform: translate(-1px, 0px);
+  }
+  40% {
+    color: lime;
+    text-shadow: none;
+    transform: translate(0, 0);
+  }
+  50% {
+    color: green;
+    text-shadow: 4px 4px 1px blue, -4px -4px 1px red;
+    transform: translate(-1px, 4px);
+  }
+  70% {
+    color: lime;
+    text-shadow: none;
+    transform: translate(0, 0);
+  }
+  80% {
+    color: lime;
+    text-shadow: 0 0 20px green;
+    transform: translate(-1px, 0px);
+  }
+  100% {
+    color: lime;
+    text-shadow: none;
+  }
+}
